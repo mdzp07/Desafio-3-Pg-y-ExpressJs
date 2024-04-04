@@ -4,11 +4,11 @@ import { agregarPost, getPosts } from './consultas.js'
 import express, { json } from 'express';
 const app = express();
 import cors from 'cors';
-app.use(json())
 
-app.listen(3000, console.log('SERVIDOR ENCENDIDO 👍'))
-
+app.use(json());
 app.use(cors());
+
+app.listen(3000, () => console.log('SERVIDOR ENCENDIDO 👍'));
 
 // Requerimiento N° 3 - Ruta GET para devolver registros de una tabla de PostgreSQL
 
